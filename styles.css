@@ -119,7 +119,6 @@ header p {
     display: none;
 }
 
-
 @keyframes blink {
     0%, 50% { opacity: 1; }
     51%, 100% { opacity: 0; }
@@ -220,7 +219,6 @@ header p {
 }
 
 /* Add flip functionality to existing me-image */
-
 .flip-image-inner {
     position: relative;
     width: 100%;
@@ -276,6 +274,7 @@ header p {
     font-size: 1.1rem;
     line-height: 1.2;
 }
+
 /* About Section */
 .photo-grid {
     display: grid;
@@ -387,6 +386,115 @@ header p {
     color: var(--primary-color);
 }
 
+/* Cool Stuff Section */
+.cool-stuff-container {
+    margin-top: 2rem;
+}
+
+.cool-item {
+    background-color: var(--card-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cool-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.cool-item.featured {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+@media (min-width: 768px) {
+    .cool-item.featured {
+        grid-template-columns: 400px 1fr;
+    }
+}
+
+.cool-image {
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--border-color);
+}
+
+@media (min-width: 768px) {
+    .cool-image {
+        height: 100%;
+        min-height: 400px;
+    }
+}
+
+.cool-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.cool-item:hover .cool-image img {
+    transform: scale(1.05);
+}
+
+.cool-content {
+    padding: 2rem;
+}
+
+.cool-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.cool-date {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.cool-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.teammate-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.teammate-link:hover {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.demo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.demo-link:hover {
+    background-color: var(--secondary-color);
+}
+
 /* Projects Section */
 .project-card {
     background-color: var(--card-color);
@@ -432,6 +540,8 @@ header p {
 .badge.discord { background-color: #5865f2; }
 .badge.matplotlib { background-color: #11557c; }
 .badge.game { background-color: #8b5cf6; }
+.badge.graph { background-color: #10b981; }
+.badge.threed { background-color: #8b5cf6; }
 
 /* Food Adventures Section */
 .food-tabs {
@@ -623,6 +733,7 @@ header p {
 .food-tag.spicy { background-color: #ff4757; }
 .food-tag.healthy { background-color: #2ed573; }
 .food-tag.comfort { background-color: #ffa726; }
+.food-tag.georgia { background-color: #ee6c4d; }
 
 .food-rating {
     display: flex;
@@ -712,6 +823,10 @@ footer p {
     .timeline-header {
         flex-direction: column;
         align-items: flex-start;
+    }
+    
+    .cool-item.featured {
+        grid-template-columns: 1fr;
     }
 }
 
