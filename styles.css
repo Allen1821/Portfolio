@@ -387,6 +387,13 @@ header p {
 }
 
 /* Cool Stuff Section */
+
+
+/* Add these to your existing badge styles (around line 456) */
+.badge.react { background-color: #61DAFB; color: #000; }
+.badge.threejs { background-color: #000000; color: #fff; }
+.threed { background-color: #8b5cf6; color: #fff; }
+
 .cool-stuff-container {
     margin-top: 2rem;
 }
